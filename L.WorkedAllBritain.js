@@ -108,7 +108,7 @@ L.WorkedAllBritain = L.LayerGroup.extend({
                 let label = new L.marker(centre, {
                     icon: new L.DivIcon({
                         html: '<span style="position: relative; top: -40%; left: -40%; text-align: center; cursor: hand; color:'+this.options.color+'; font-weight: bold; font-size:120%;">' + squareRef + '</font></span>',
-                        className: 'my-div-icon' // Prevent default background & border
+                        className: 'wabSquareLabel' // Prevent default background & border and provide ability to customise
                     })
                 }, clickable=false);
                 this.addLayer(label);
@@ -141,7 +141,7 @@ L.WorkedAllBritain = L.LayerGroup.extend({
                             let label = new L.marker(centre, {
                                 icon: new L.DivIcon({
                                     html: '<span style="position: relative; top: -20%; left: -100%; text-align: center; cursor: hand; color:'+this.options.color+'; font-weight: bold; font-size:120%;">' + squareRef + i + j + '</font></span>',
-                                    className: 'my-div-icon' // Prevent default background & border
+                                    className: 'wabSquareLabelLong' // Prevent default background & border and provide ability to customise
                                 })
                             }, clickable=false);
                             this.addLayer(label);
