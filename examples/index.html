@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Worked All Britain layer demo</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="../L.WorkedAllBritain.js"></script>
+    <style>html, body, #map { height: 100%; }</style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([54, -3], 5);
+      L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      L.workedAllBritain().addTo(map);
+    </script>
+  </body>
+</html>
