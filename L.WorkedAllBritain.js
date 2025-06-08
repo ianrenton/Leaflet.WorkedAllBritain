@@ -16,7 +16,7 @@ L.WorkedAllBritain = L.LayerGroup.extend({
 
         // Workaround to load the geodesy modules in non-modular code. Once we have loaded all three modules, trigger a
         // first draw.
-        import("./modules/geodesy/osgridref.js")
+        import("https://ianrenton.github.io/Leaflet.WorkedAllBritain/modules/geodesy/osgridref.js")
             .then(module => {
                 this._osGridLibrary = module;
                 if (this._ieGridLibrary && this._utmLibrary) {
@@ -27,7 +27,7 @@ L.WorkedAllBritain = L.LayerGroup.extend({
                 console.log("Error loading OS Grid Ref library, GB WAB squares may not be available.");
                 console.log(error);
             });
-        import("./modules/geodesy/iegridref.js")
+        import("https://ianrenton.github.io/Leaflet.WorkedAllBritain/modules/geodesy/iegridref.js")
             .then(module => {
                 this._ieGridLibrary = module;
                 if (this._osGridLibrary && this._utmLibrary) {
@@ -38,7 +38,7 @@ L.WorkedAllBritain = L.LayerGroup.extend({
                 console.log("Error loading IE Grid Ref library, NI WAB squares may not be available.");
                 console.log(error);
             });
-        import("./modules/geodesy/utm_ci.js")
+        import("https://ianrenton.github.io/Leaflet.WorkedAllBritain/modules/geodesy/utm_ci.js")
             .then(module => {
                 this._utmLibrary = module;
                 if (this._osGridLibrary && this._ieGridLibrary) {
